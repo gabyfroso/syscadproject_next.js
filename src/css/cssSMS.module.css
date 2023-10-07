@@ -1,0 +1,120 @@
+.divsms {
+    position: absolute;
+    bottom: 2em;
+    
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.divsms>button {
+    position: absolute;
+
+    bottom: 2em;
+    margin: auto;
+
+    width: 5em;
+    height: 4.5em;
+
+    padding: 15px;
+
+    background-color: rgba(0, 0, 0, 0.331);
+    border-radius: 50%;
+
+    z-index: 10;
+
+    .MDi {
+        position: absolute;
+
+        width: 1em;
+        height: 1em;
+
+        top: .7em;
+        right: .7em;
+
+        border-radius: 50%;
+
+        background-color: rgba(185, 0, 0, 0.79);
+        border: .35em solid rgb(255, 0, 0);
+    }
+
+    .MD {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+button.ExitButton{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.256);
+    z-index: -1;
+}
+
+div.SMSPage {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+
+    * {
+        overflow-y: scroll;
+    }
+}
+
+div.visible{
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    bottom: 8em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+    .visiblenotif{
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: cursive;
+
+        z-index: 12;
+    }
+
+    border-radius: 4px;
+    background-color: rgba(0, 93, 214, 0.84 );
+}
+
+.visiblefset{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin: 5px;
+    padding: 4px;
+    margin-top: 1em;
+    padding-bottom: 2em;
+
+    animation: aparecerenpantalla 2s linear forwards 1;
+
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+}
+.visiblefset>legend, .visiblefset>h2{
+    text-align: center;
+}
+
+@keyframes aparecerenpantalla {
+    0%{
+        left: -20em;
+        opacity: 0;
+        transform: scaleX(.4);
+    }
+    100%{
+        left: 0;
+        transform: scaleX(1)
+    }
+}

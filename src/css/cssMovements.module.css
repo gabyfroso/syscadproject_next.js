@@ -1,0 +1,208 @@
+div.anim * {
+    position: absolute;
+}
+
+div.anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(2px);
+
+    z-index: -1;
+}
+
+@keyframes myAnim {
+    0% {
+        transform: scale(.8);
+        left: 120%;
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08) rotate(10deg);
+    }
+
+    84% {
+        opacity: 1;
+        left: -20%;
+        right: 120%;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+div.bkg {
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    
+    animation: xbkg 12s ease-in-out infinite;
+}
+
+div.bkg>div {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    position: absolute;
+    background-image: url('/img/pixai-universe.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@keyframes xbkg {
+    0% {
+        height: 100%;
+        width: 100%;
+    }
+
+    33% {
+        transform: scale(1.01) scaleX(1.01);
+    }
+
+    66% {
+        transform: scale(1.03) scaleY(1.01);
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+
+fieldset.fs {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    top: 0;
+    
+    height: 100%;
+    width: 100%;
+
+    justify-content: center;
+    justify-items: center;
+
+    z-index: 10;
+}
+fieldset.fs>form{
+    position: absolute;
+    width: 100%;
+    height: 16em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    overflow: visible;
+}
+
+
+fieldset.fs>form>ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 1em;
+    list-style: none;
+
+    .li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        flex-grow: 1;
+
+        font-size: 1.4rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 100%;
+        margin: auto;
+
+        text-align: center;
+        justify-items: center;
+        justify-content: center;
+
+        background-color: rgba(6, 228, 228, 0.275);
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.316);
+        border-radius: 4px;
+    }
+}
+
+li.li>input{
+    background-color: rgba(117, 255, 255, 0.233);
+    color: rgb(0, 251, 255);
+
+    font-family: Monospace;
+    margin-left: 2em;
+    margin-right: 2em;
+
+    padding-left: 1em;
+
+    font-size: 1.2rem;
+}
+
+li.li input:focus{
+    outline: none;
+}
+
+
+
+li.li:last-child>div{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .finput{
+        background-color: rgba(117, 255, 255, 0.233);
+        color: rgb(0, 251, 255);
+    
+        flex-grow: 1;
+    
+        font-family: Monospace;
+        margin-left: 2em;
+        margin-right: 1em;
+        padding-left: 1em;
+    
+        font-size: 1.2rem;
+    }
+
+    .binput{
+        margin-right: 1em;
+    }
+}
+
+input.submit{
+    position: absolute;
+
+    top: 14em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10em;
+    height: 3em;
+    font-size: 1.1rem;
+
+    background-color: rgba(148, 56, 235, 0.871);
+    
+    border-radius: 8px;
+}
